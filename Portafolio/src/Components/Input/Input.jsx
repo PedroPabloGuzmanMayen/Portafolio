@@ -10,7 +10,7 @@ const Input = ({value, onChange, onEnter, isDisabled }) => {
                 type="text"
                 value={value}
                 onChange={onChange}
-                className="input"
+                className='input'
                 onKeyDown = {onEnter}
                 disabled = {isDisabled}
               />

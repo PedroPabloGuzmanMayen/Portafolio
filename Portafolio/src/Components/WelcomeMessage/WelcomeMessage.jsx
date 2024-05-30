@@ -8,7 +8,7 @@ const WelcomeMessage = () => {
           <h1 classname = "title">
             <pre className = "title" >
               {`
-              Welcome to the shell                                                                      
+Welcome to the shell                                                                                           
               `}
             </pre>
           </h1>

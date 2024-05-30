@@ -58,8 +58,10 @@ const Terminal = () =>{
       <ul ref={ulRef} className="list">
         {components.map((comp, index) => {
           const { Component, props,name } = comp;
-          return name === 'input' (
+          return name === 'input' ? (
 
+            <Component {...props} isDisabled={ index === components.length -1 ? false:true} key ={index} />
+          ) : (
             <Component {...props} key ={index} />
           )
         })}
