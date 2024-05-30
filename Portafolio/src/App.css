@@ -16,6 +16,6 @@
   background-color: aqua;
 }
 
-.list {
-  list-style: none;
+.App {
+  overflow-y: auto;
 }
