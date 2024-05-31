@@ -28,6 +28,12 @@ const About = () => {
                 <li className = 'Description'>
                     I love penguins (for that reason I use it as an Avatar) 🐧
                 </li>
+                <li className = 'Description'>
+                    I love 2010's music, it's the best music ever made 🎵
+                </li>
+                <li className = 'Description'>
+                    I love 2010's cartoon network shows, my favorite shows are: Adventure Time, Regular Show, and Gumball  📺
+                </li>
             </ul>
             <p className = 'penguin'>
                 <pre>

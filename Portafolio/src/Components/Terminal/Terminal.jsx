@@ -4,6 +4,11 @@ import Education from '../Education/Education'
 import Input from '../Input/Input'
 import About from '../About/About'
 import Help from '../Help/Help'
+import Joke from '../Joke/Joke'
+import Projects from '../MyWork/Projects'
+import Face from '../Face/Face'
+import NotFound from '../NotFound/NotFound'
+import Secret from '../Secret/Secret'
 import { useState, useEffect, useRef } from 'react'
 import './Terminal.css'
 
@@ -32,12 +37,44 @@ const Terminal = () =>{
           routes['about'], routes['input']
         ])
       }
-        else if (txtInput.current === 'help'){
+      else if (txtInput.current === 'help'){
             setComponents(prevComponents => [
             ...prevComponents,
             routes['help'], routes['input']
             ])
         }
+      else if (txtInput.current === 'face'){
+            setComponents(prevComponents => [
+            ...prevComponents,
+            routes['joke'], routes['input']
+            ])
+        }
+      else if (txtInput.current === 'clear'){
+            setComponents([routes['input']])
+        }
+      else if (txtInput.current === 'welcome'){
+                setComponents([routes['welcome'], routes['input']])
+        }
+       else if (txtInput.current === 'projects'){
+            setComponents(prevComponents => [
+                ...prevComponents,
+                routes['projects'], routes['input']
+                ])
+        }
+        else if (txtInput.current === 'real'){
+            setComponents(prevComponents => [
+                ...prevComponents,
+                routes['real'], routes['input']
+                ])
+
+        }
+        else if (txtInput.current === 'repo'){
+            setComponents(prevComponents => [
+                ...prevComponents,
+                routes['repo'], routes['input']
+                ])
+        }
+
       else {
         setComponents(prevComponents => [
             ...prevComponents,
@@ -61,7 +98,7 @@ const Terminal = () =>{
     },
     'default': {
       name: 'default',
-      Component: () => <h1 key="default">Command not found</h1>,
+      Component: NotFound,
       props: { }
     },
     'education':{
@@ -78,6 +115,27 @@ const Terminal = () =>{
         name: 'help',
         Component: Help,
         props: { }
+    },
+    'joke':{
+        name: 'joke',
+        Component: Joke,
+        props: { }
+    },
+    'projects':{
+        name: 'projects',
+        Component: Projects,
+        props: { }
+    },
+    'real':{
+        name: 'real',
+        Component: Face,
+        props: { }
+    },
+    'repo':{
+        name: 'repo',
+        Component: Secret,
+        props: { }
+
     }
   }
 
@@ -94,17 +152,17 @@ const Terminal = () =>{
     <div className="terminal">
       <ul ref={ulRef} className="list">
         {components.map((comp, index) => {
-          const { Component, props,name } = comp;
+          const { Component, props, name } = comp;
           return name === 'input' ? (
-
-            <Component {...props} isDisabled={ index === components.length -1 ? false:true} key ={index} />
+            <Component {...props} isDisabled={index === components.length - 1 ? false : true} key={index} />
           ) : (
-            <Component {...props} key ={index} />
-          )
+            <Component {...props} key={index} />
+          );
         })}
       </ul>
     </div>
-  )
+  );
+  
 }
 
 export default Terminal

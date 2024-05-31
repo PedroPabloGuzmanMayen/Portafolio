@@ -1,0 +1,23 @@
+.list {
+    list-style: none
+}
+
+.item {
+    font-size: 16px;
+    color: #2AAA8A;
+}
+
+.js {
+    font-size: 4px;
+    color: #d4e51e;
+}
+
+.postgreSQL {
+    font-size: 6px;
+    color: #336791;
+}
+
+.python {
+    font-size: 4px;
+    color: #306998;
+}

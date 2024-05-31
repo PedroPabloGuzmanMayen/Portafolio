@@ -1,13 +1,14 @@
 *
 {
     font-family: monospace;
-    color: #2AAA8A;
 }
 
 .mainTitle {
     font-size: 16px;
+    color: #2AAA8A;
 }
 
 .penguin {
     font-size: 5px;
+    color: #2AAA8A;
 }

@@ -13,6 +13,8 @@ const Help = () => {
                 <li className = 'description'>projects: see coding projects where I've worked </li>
                 <li className = 'description'>socials: get my accounts on twitter, github and gmail (Please don't open my twitter profile)</li>
                 <li className = 'description'>face: see my face</li>
+                <li className = 'description'> clear: clears the terminal </li>
+                <li className = 'description'> welcome: load the welcome component again (there is no reason why you would want to do that again (unless there's a post about secret command there :0) )</li>
                 <li className = 'description'>There's another one find it 😉</li>
             </ul>
             <p className = 'yoda'>
