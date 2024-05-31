@@ -9,6 +9,7 @@ import Projects from '../MyWork/Projects'
 import Face from '../Face/Face'
 import NotFound from '../NotFound/NotFound'
 import Secret from '../Secret/Secret'
+import Socials from '../Socials/Socials'
 import { useState, useEffect, useRef } from 'react'
 import './Terminal.css'
 
@@ -74,6 +75,12 @@ const Terminal = () =>{
                 routes['repo'], routes['input']
                 ])
         }
+        else if (txtInput.current === 'socials'){
+            setComponents(prevComponents => [
+                ...prevComponents,
+                routes['socials'], routes['input']
+                ])
+        }
 
       else {
         setComponents(prevComponents => [
@@ -136,6 +143,11 @@ const Terminal = () =>{
         Component: Secret,
         props: { }
 
+    },
+    'socials':{
+        name: 'socials',
+        Component: Socials,
+        props: { }
     }
   }
 

@@ -1,0 +1,30 @@
+.titles {
+    font-size: 16px;
+    font-family: monospace;
+    color: white;
+}
+
+
+.description {
+    font-size: 16px;
+    font-family: monospace;
+    color: #2AAA8A;
+}
+
+.mail {
+    font-size: 4px;
+    font-family: monospace;
+    color: #2AAA8A;
+}
+
+.twitter {
+    font-size: 8px;
+    font-family: monospace;
+    color: #2AAA8A;
+}
+
+.git{
+    font-size: 8px;
+    font-family: monospace;
+    color: #2AAA8A;
+}
