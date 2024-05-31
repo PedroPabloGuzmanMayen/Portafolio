@@ -1,5 +1,6 @@
 import React from 'react';
 import WelcomeMessage from '../WelcomeMessage/WelcomeMessage';
+import Education from '../Education/Education';
 import Input from '../Input/Input';
 import { useState, useEffect, useRef } from 'react';
 import './Terminal.css';
@@ -17,12 +18,19 @@ const Terminal = () =>{
 
   const onEnter = (e) => {
     if (e.keyCode === 13){
-      console.log(txtInput)
-      console.log(components)
-      setComponents(prevComponents => [
-        ...prevComponents,
-        routes['default'], routes['input']
-      ]);
+      if (txtInput.current === 'education'){
+        setComponents(prevComponents => [
+          ...prevComponents,
+          routes['education'], routes['input']
+        ]);
+      }
+      else {
+        setComponents(prevComponents => [
+            ...prevComponents,
+            routes['default'], routes['input']
+          ]);
+
+      }
     }
   }
 
@@ -41,6 +49,11 @@ const Terminal = () =>{
       name: 'default',
       Component: () => <h1 key="default">Command not found</h1>,
       props: { }
+    },
+    'education':{
+        name: 'education',
+        Component: Education,
+        props: { }
     }
   };
 
