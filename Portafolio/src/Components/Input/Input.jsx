@@ -5,9 +5,10 @@ const Input = ({value, onChange, onEnter, isDisabled }) => {
     return (
         <li className = 'Contain'>
             <label className = 'Container'>
-              <span className = 'text'> $ ppgm@shell</span>
+              <span className = 'text'> ppguz@ppgm:~$ </span>
               <input
                 type="text"
+                autoFocus
                 value={value}
                 onChange={onChange}
                 className='input'
