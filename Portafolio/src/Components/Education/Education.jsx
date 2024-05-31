@@ -19,7 +19,7 @@ const Education = () => {
               </pre>
             </h1>
             <p className = 'Description'>
-                I'm a computer Science student at Universidad del Valle de Guatemala. I'm actually in the 5th semester and I'm learning about web development, relational databases, agile methodologies, and more.
+                I'm a computer Science student at Universidad del Valle de Guatemala. I'm actually in the 5th sEmester and I'm learning about web development, relational databases, agile methodologies, and more.
             </p>
             <h1 className = 'computer'>
               <pre>

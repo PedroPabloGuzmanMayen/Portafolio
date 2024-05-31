@@ -1,9 +1,11 @@
-import React from 'react';
-import WelcomeMessage from '../WelcomeMessage/WelcomeMessage';
-import Education from '../Education/Education';
-import Input from '../Input/Input';
-import { useState, useEffect, useRef } from 'react';
-import './Terminal.css';
+import React from 'react'
+import WelcomeMessage from '../WelcomeMessage/WelcomeMessage'
+import Education from '../Education/Education'
+import Input from '../Input/Input'
+import About from '../About/About'
+import Help from '../Help/Help'
+import { useState, useEffect, useRef } from 'react'
+import './Terminal.css'
 
 const Terminal = () =>{
       
@@ -22,13 +24,19 @@ const Terminal = () =>{
         setComponents(prevComponents => [
           ...prevComponents,
           routes['education'], routes['input']
-        ]);
+        ])
+      }
+      else if (txtInput.current === 'about'){
+        setComponents(prevComponents => [
+          ...prevComponents,
+          routes['about'], routes['input']
+        ])
       }
       else {
         setComponents(prevComponents => [
             ...prevComponents,
             routes['default'], routes['input']
-          ]);
+          ])
 
       }
     }
@@ -54,8 +62,18 @@ const Terminal = () =>{
         name: 'education',
         Component: Education,
         props: { }
+    },
+    'about':{
+        name: 'about',
+        Component: About,
+        props: { }
+    },
+    'help':{
+        name: 'help',
+        Component: Help,
+        props: { }
     }
-  };
+  }
 
   useEffect(() => {
     setComponents([routes['welcome'], routes['input']])
