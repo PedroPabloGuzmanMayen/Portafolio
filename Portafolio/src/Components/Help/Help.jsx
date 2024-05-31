@@ -1,20 +1,21 @@
 import React from 'react'
+import './Help.css'
 
 const Help = () => {
 
     return (
         <div>
-            <h1>Are you lost</h1>
-            <p>Here are some commands you can use:</p>
-            <ul>
-                <li>about: learn more about me</li>
-                <li>education: learn more about my education background</li>
-                <li>projects: see coding projects where I've worked </li>
-                <li>socials: get my accounts on twitter, github and gmail (Please don't open my twitter profile)</li>
-                <li>face: see my face</li>
-                <li>There's another one find it 😉</li>
+            <h1 className = 'helptitle'>Are you lost?</h1>
+            <p className = 'description'>Here are some commands you can use:</p>
+            <ul className = 'helplist'>
+                <li className = 'description' >about: learn more about me</li>
+                <li className = 'description'>education: learn more about my education background</li>
+                <li className = 'description'>projects: see coding projects where I've worked </li>
+                <li className = 'description'>socials: get my accounts on twitter, github and gmail (Please don't open my twitter profile)</li>
+                <li className = 'description'>face: see my face</li>
+                <li className = 'description'>There's another one find it 😉</li>
             </ul>
-            <p>
+            <p className = 'yoda'>
                 <pre>
                     {`
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⠤⠐⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

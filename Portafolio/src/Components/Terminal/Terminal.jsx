@@ -32,6 +32,12 @@ const Terminal = () =>{
           routes['about'], routes['input']
         ])
       }
+        else if (txtInput.current === 'help'){
+            setComponents(prevComponents => [
+            ...prevComponents,
+            routes['help'], routes['input']
+            ])
+        }
       else {
         setComponents(prevComponents => [
             ...prevComponents,
