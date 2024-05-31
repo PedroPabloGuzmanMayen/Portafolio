@@ -1,7 +1,12 @@
 .computer {
-  font-size: 7px;
+  font-size: 4px;
 }
 
 .Description {
     font-size: 16px;
+}
+
+.uvg_logo {
+    font-size: 15px;
+    color: #62fc03;
 }
