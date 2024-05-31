@@ -1,4 +1,12 @@
 .title {
     color: green;
     font-family: monospace;
+    font-size: 35px;
+}
+
+.welcomeMessage {
+    display: flex;
+    flex-direction: column;
+    
+
 }
